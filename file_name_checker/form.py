@@ -2,6 +2,7 @@
 
 from tkinter import filedialog
 import tkinter as tk
+from time import gmtime, strftime
 import json
 from file_name_check_rules import *
 
@@ -12,6 +13,13 @@ try:
 except FileNotFoundError:
     pass
 
+log_file = None
+try:
+    log_file = open('files/file_name_checker_logs.txt', 
+                    "a", encoding="utf-8")
+except FileNotFoundError:
+    log_file = open('files/file_name_checker_logs.txt', 
+                    "w", encoding="utf-8")
 
 selected_directory = [""]
 
@@ -162,8 +170,30 @@ des fichiers",
              bg=couleur_fond, font="Arial 8 normal").pack()
     tk.mainloop()
 
+
+def params2logfile(outputfilename, extension_files,
+                   checkrules, get_exceptions,
+                   get_subdirectories):
+    get_exceptions_dict = {1: "Lister les fichiers ne correspondant pas aux règles",
+                           2: "Lister les fichiers conformes aux règles de nommage"}
+    get_subdirectories_dict = {0: "Ne pas analyser les sous-répertoires",
+                          1: "Analyser les sous-répertoires"}
+    
+    log_file.write(f"""
+Contrôle du {strftime("%Y-%m-%d %H:%M:%S", gmtime())}
+Nom du fichier en sortie : {outputfilename}
+Règles de contrôle : {checkrules}
+Extensions de fichier : {extension_files}
+Option : {get_exceptions_dict[get_exceptions]}
+Option : {get_subdirectories_dict[get_subdirectories]}
+""")
+
+
 def launch(outputfilename, extension_files, checkrules,
            get_exceptions, get_subdirectories):
+    params2logfile(outputfilename, extension_files,
+                   checkrules, get_exceptions,
+                   get_subdirectories)
     extension_files = extension_files.split(",")
     output_filepath = os.path.join(selected_directory[0], outputfilename)
     launch_analyse(output_filepath, selected_directory[0], 
