@@ -1,6 +1,7 @@
 # File name checker : Programme de vérification de nommage de fichiers
 
 ## Contrôles réalisés
+
 Le programme propose des contrôles par défaut.
 
 Ils peuvent être modifiés lors du lancement du programme.
