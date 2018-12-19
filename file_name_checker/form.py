@@ -124,14 +124,14 @@ des fichiers",
     tk.Radiobutton(
         option_exceptions,
         bg=couleur_fond,
-        text="Identifier les fichier non conformes aux règles",
+        text="Identifier les fichiers non conformes aux règles",
         variable=get_exceptions,
         value=1,
         justify="left").pack()
     tk.Radiobutton(
         option_exceptions,
         bg=couleur_fond,
-        text="Identifier les fichier correspondant aux règles",
+        text="Identifier les fichiers correspondant aux règles",
         variable=get_exceptions,
         value=2,
         justify="left").pack()
