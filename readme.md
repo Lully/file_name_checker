@@ -6,7 +6,12 @@ Le programme propose des contrôles par défaut.
 
 Ils peuvent être modifiés lors du lancement du programme.
 
-Mais si vous avez des vérifications régulières à faire avec une même règle de nommage, vous pouvez modifier le fichier de préférences dans files/prefs.json
+Mais si vous avez des vérifications régulières à faire avec une même règle de nommage, vous pouvez modifier le fichier de préférences dans config/prefs.json
+
+Par défaut, le rapport du contrôle est enregistré à la racine du dossier contrôlé.
+
+![Formulaire](https://raw.githubusercontent.com/Lully/file_name_checker/master/img/form.png)
+
 
 ## Installation
 
