@@ -5,20 +5,21 @@ import tkinter as tk
 from time import gmtime, strftime
 import json
 from file_name_check_rules import *
+from version import *
 
 prefs = {}
 try:
-    with open('files/prefs.json', encoding="utf-8") as prefs_file:
+    with open('config/prefs.json', encoding="utf-8") as prefs_file:
         prefs = json.load(prefs_file)
 except FileNotFoundError:
     pass
 
 log_file = None
 try:
-    log_file = open('files/file_name_checker_logs.txt', 
+    log_file = open('config/file_name_checker_logs.txt', 
                     "a", encoding="utf-8")
 except FileNotFoundError:
-    log_file = open('files/file_name_checker_logs.txt', 
+    log_file = open('config/file_name_checker_logs.txt', 
                     "w", encoding="utf-8")
 
 selected_directory = [""]
@@ -36,7 +37,7 @@ def formulaire_main(output_filename_default,
      zone_actions,
      zone_ok_help_cancel,
      zone_notes] = main_form_frames(
-         "Programme de contrôle de nommage\
+         "Programme de contrôle de nommage \
 des fichiers",
          couleur_fond,
          couleur_bouton)
@@ -151,7 +152,7 @@ des fichiers",
     launch_button = tk.Button(frame_launch,
                               text="Lancer le contrôle\nsur le nommage\ndes fichiers",
                               command=lambda: launch(outputfilename.get(),
-                                                     extension_files.get(),
+                                                     extensions_files.get(),
                                                      checkrules.get(),
                                                      get_exceptions.get(),
                                                      get_subdirectories.get()),

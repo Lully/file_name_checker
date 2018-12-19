@@ -1,0 +1,21 @@
+
+Contrôle du 2018-12-19 15:21:59
+Nom du fichier en sortie : rapport erreurs de nommage.txt
+Règles de contrôle : \w{1,8}\-\d{1,5}\-\d{3}_[\d\-]{1,8}
+Extensions de fichier : JPG,PNG,TIF,GIF,MP4,MP3,MOV
+Option : Lister les fichiers ne correspondant pas aux règles
+Option : Analyser les sous-répertoires
+
+Contrôle du 2018-12-19 15:22:24
+Nom du fichier en sortie : rapport erreurs de nommage_espaces.txt
+Règles de contrôle : [^ ]+
+Extensions de fichier : JPG,PNG,TIF,GIF,MP4,MP3,MOV
+Option : Lister les fichiers ne correspondant pas aux règles
+Option : Analyser les sous-répertoires
+
+Contrôle du 2018-12-19 15:22:45
+Nom du fichier en sortie : rapport erreurs de nommage_espacesMOV.txt
+Règles de contrôle : [^ ]+
+Extensions de fichier : MOV
+Option : Lister les fichiers ne correspondant pas aux règles
+Option : Analyser les sous-répertoires

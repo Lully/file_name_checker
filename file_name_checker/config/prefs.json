@@ -1,0 +1,6 @@
+{
+ "output_filename": "rapport erreurs de nommage.txt",
+ "extensionfile_list": ["JPG", "PNG", "TIF", "GIF", "MP4", "MP3", "MOV"],
+ "check_name_rule": "\\w{1,8}\\-\\d{1,5}\\-\\d{3}_[\\d\\-]{1,8}",
+ "introduction_text": "Ce programme vérifie dans un ensemble de répertoires\nsi l'ensemble des fichiers\na un nom conforme à ce qui est attendu.\nLes règles de nommage sont exprimées\navec des expressions régulières\n(et vous pouvez vous documenter sur Google).\n\nVoici quelques exemples : \n\n \\w                    tout caractère alphanumérique\n \\d                     tout chiffre\n [a-zA-Z]          toute lettre\n .                        tout caractère\n [^\\w]                tout caractère sauf alphanumérique (donc : espace, ponctuation)\n \\d{9}                une séquence de 9 chiffres\n \\w{1,8}             de 1 à 8 caractères alphanumériques\n\n\n[Ce texte de présentation \nest modifiable dans le fichier des préférences (config/prefs.json)]\n"
+}

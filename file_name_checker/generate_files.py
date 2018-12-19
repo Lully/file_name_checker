@@ -56,6 +56,6 @@ liste = [
 
 
 for el in liste:
-    output_filepath = os.path.join(r"C:\Users\Lully\Documents\Hélène\scripts\mn\verification_noms_de_fichiers\verification_noms_de_fichiers\tests", el)
+    output_filepath = os.path.join(r"tests", el)
     create_file(output_filepath)
     
