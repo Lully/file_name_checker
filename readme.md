@@ -1,15 +1,11 @@
-# Programme de vérification du nommage des fichiers image à charger dans la base
+# File name checker : Programme de vérification de nommage de fichiers
 
 ## Contrôles réalisés
-Le fichier doit être nommé de la manière suivante :
-* Code alphanumérique (jusqu'à 8 caractères)
-* tiret
-* 1 à 5 chiffres
-* tiret
-* 3 chiffres
-* underscore
-* chiffres ou tirets (jusqu'à 8 caractères)
-* .JPG, .PNG, .TIF, .GIF, .MP4, .MP3, .MOV
+Le programme propose des contrôles par défaut.
+
+Ils peuvent être modifiés lors du lancement du programme.
+
+Mais si vous avez des vérifications régulières à faire avec une même règle de nommage, vous pouvez modifier le fichier de préférences dans files/prefs.json
 
 ## Installation
 
@@ -19,8 +15,8 @@ Le fichier doit être nommé de la manière suivante :
 
 ## Utilisation
 
-1. Ouvrir le répertoire "verification_nommage_fichier"
-2. Lancer (double-clic) le fichier *verification_nommage_fichier.bat*
-3. Indiquer le nom (chemin complet) du dossier où se trouvent les fichiers à analyser
+1. Ouvrir le répertoire "file_name_checker"
+2. Lancer (double-clic) le fichier *file_name_checker.bat*
+3. Sélectionner le dossier où se trouvent les fichiers à analyser
 4. Donner un nom au fichier rapport
 5. Récupérer le fichier rapport dans le dossier des images : il contient la liste des erreurs
